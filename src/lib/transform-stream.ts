@@ -12,11 +12,7 @@ import {
   typeIsObject,
   ValidateAndNormalizeHighWaterMark
 } from './helpers';
-import {
-  CreateReadableStream,
-  ReadableStream,
-  ReadableStreamDefaultControllerType as ReadableStreamDefaultController
-} from './readable-stream';
+import { CreateReadableStream, ReadableStream, ReadableStreamDefaultController } from './readable-stream';
 import {
   ReadableStreamDefaultControllerCanCloseOrEnqueue,
   ReadableStreamDefaultControllerClose,

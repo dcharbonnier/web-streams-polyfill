@@ -1,12 +1,12 @@
 import {
   PipeOptions,
-  ReadableByteStreamControllerType,
+  ReadableByteStreamController as ReadableByteStreamControllerType,
   ReadableStream,
   ReadableStreamAsyncIterator,
-  ReadableStreamBYOBReaderType,
-  ReadableStreamBYOBRequestType,
-  ReadableStreamDefaultControllerType,
-  ReadableStreamDefaultReaderType,
+  ReadableStreamBYOBReader as ReadableStreamBYOBReaderType,
+  ReadableStreamBYOBRequest as ReadableStreamBYOBRequestType,
+  ReadableStreamDefaultController as ReadableStreamDefaultControllerType,
+  ReadableStreamDefaultReader as ReadableStreamDefaultReaderType,
   ReadResult,
   UnderlyingByteSource,
   UnderlyingSource
@@ -23,17 +23,18 @@ import CountQueuingStrategy from './lib/count-queuing-strategy';
 import { Transformer, TransformStream, TransformStreamDefaultControllerType } from './lib/transform-stream';
 import { AbortSignal } from './lib/abort-signal';
 
+export type ReadableStreamDefaultController<R> = ReadableStreamDefaultControllerType<R>;
+export type ReadableByteStreamController = ReadableByteStreamControllerType;
+export type ReadableStreamBYOBRequest = ReadableStreamBYOBRequestType;
+export type ReadableStreamDefaultReader<R> = ReadableStreamDefaultReaderType<R>;
+export type ReadableStreamBYOBReader = ReadableStreamBYOBReaderType;
+
 export {
   ReadableStream,
   UnderlyingSource,
   UnderlyingByteSource,
   PipeOptions,
   ReadResult,
-  ReadableStreamDefaultControllerType as ReadableStreamDefaultController,
-  ReadableByteStreamControllerType as ReadableByteStreamController,
-  ReadableStreamBYOBRequestType as ReadableStreamBYOBRequest,
-  ReadableStreamDefaultReaderType as ReadableStreamDefaultReader,
-  ReadableStreamBYOBReaderType as ReadableStreamBYOBReader,
   ReadableStreamAsyncIterator,
 
   WritableStream,
